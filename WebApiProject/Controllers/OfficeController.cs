@@ -19,7 +19,7 @@ namespace WebApiProject.Controllers
         }
 
         [HttpGet]
-        [Route("allofficedetails")]
+        [Route("alloffice")]
         public IList<Office> GetOffices()
         {
             return _officeService.GetAllOffices();
@@ -40,6 +40,7 @@ namespace WebApiProject.Controllers
         }
 
         [HttpDelete]
+        [Route("delete")]
         public void DeleteOffice(int id)
         {
             this._officeService.DeleteOffice(id);
