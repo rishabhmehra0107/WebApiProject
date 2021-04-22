@@ -19,7 +19,7 @@ namespace WebApiProject.Controllers
         }
 
         [HttpGet]
-        [Route("allemployeedetails")]
+        [Route("allemployee")]
         public IList<Employee> GetEmployees()
         {
             return this._employeeService.GetAllEmployees();
@@ -34,20 +34,21 @@ namespace WebApiProject.Controllers
 
 
         [HttpPost]
-        [Route("insertemployeedetails")]
+        [Route("insertemployee")]
         public void InsertEmployee(Employee employee)
         {
             this._employeeService.InsertEmployee(employee);
         }
 
         [HttpPut]
-        [Route("updateemployeedetails")]
+        [Route("updateemployee")]
         public void UpdateEmployee(Employee employee)
         {
             this._employeeService.UpdateEmployee(employee);
         }
 
         [HttpDelete]
+        [Route("delete")]
         public void DeleteEmployee(int id)
         {
             this._employeeService.DeleteEmployee(id);
