@@ -19,7 +19,7 @@ namespace WebApiProject.Controllers
         }
 
         [HttpGet]
-        [Route("alldesignationdetails")]
+        [Route("alldesignation")]
         public IList<Designation> GetDesignations()
         {
             return _designationService.GetAllDesignations();
@@ -40,6 +40,7 @@ namespace WebApiProject.Controllers
         }
 
         [HttpDelete]
+        [Route("delete")]
         public void DeleteDesignation(int id)
         {
             this._designationService.DeleteDesignation(id);
