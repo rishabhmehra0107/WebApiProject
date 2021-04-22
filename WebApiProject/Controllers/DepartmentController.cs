@@ -19,7 +19,7 @@ namespace WebApiProject.Controllers
         }
 
         [HttpGet]
-        [Route("alldepartmentdetails")]
+        [Route("alldepartment")]
         public IList<Department> GetDepartments()
         {
             return _departmentService.GetAllDepartments();
@@ -40,6 +40,7 @@ namespace WebApiProject.Controllers
         }
 
         [HttpDelete]
+        [Route("delete")]
         public void DeleteDepartment(int id)
         {
             this._departmentService.DeleteDepartment(id);
